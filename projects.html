@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<link rel="stylesheet" href="styles/style.css" />
+    	<title> Projects </title>
+  	</head>
+
+  	<body style="background-color:powderblue;", class="bg">
+		<div style="align-items: left; background-color:#1e1e2e; padding: 10px 20px">
+			<a href="index.html">
+		  		<button type="button", class="line-button"> Home </button>
+			</a>
+
+			<a href="projects.html">
+			  <button type="button", class="line-button"> Projects </button>
+			</a>
+
+			<a href="thoughts.html">
+			  <button type="button", class="line-button"> Thoughts </button>
+			</a>
+		</div>
+    
+		<!-- Content will go here -->
+
+		<section class="project-showcase">
+			<div class="project-card">
+				<img src="projects/alpr-ejemplo.png" alt="Preview alpr", class="thumbnail">
+				<h3> Sistema en dos etapas para la detectión y reconocimiento automático de placas vehiculares 
+					utilizando modelos etapas extremo a extremo y datos sintéticos </h3>
+				<p> Intituto Tecnológico de Costa Rica required an ALPR due to difficulty of finding 
+				parking slots, but it had to be cheap to use propetary hardware. 
+				The solution was to train and deploy a custom ALPR. 
+				It was designed in two stages to train with few data and to compensate
+				lack of data a method  of synthetic data generation was proposed. </p>
+				<a href="https://github.com/jcorea510/TFG-ANPR.git" target="_blank">View Code</a>
+			</div>
+
+			<div class="project-card">
+				<img src="projects/stm32multidevice.jpeg" alt="Preview stm32multidevice", class="thumbnail">
+				<h3> STM32 multidevice using async instead of RTOS </h3>
+				<p> This was a very simple example of how to program embedded software
+				in rust embassy. A few thought may be written later about some intersting
+				concerns. </p>
+				<a href="https://github.com/jcorea510/mini_projects_lang/tree/main/stm32multidevice"
+					target="_blank"> View Code</a>
+			</div>
+
+			<div class="project-card">
+				<img src="projects/rustygame.png" alt="Preview rustygame", class="thumbnail">
+				<!-- <video width="320" height="240" controls> -->
+				<!-- 	<source src="projects/rustygame.mp4" type="video/mp4"> -->
+				<!-- Your browser does not support the video tag. -->
+				<!-- </video>  -->
+				<h3> Rusty game </h3>
+				<p> My very first game and my very first use of Rust. 
+				This is a game when you run from a group of chaser slimes. 
+				A lot of features were never implement like damage from attacks
+				or criteria of losing/winning. My objetice was mainly 
+				to learn basic core of rust. </p>
+				<a href="https://github.com/jcorea510/mini_projects_lang/tree/main/rustygame" target="_blank">View Code</a>
+			</div>
+
+			<div class="project-card">
+				<img src="projects/dotfiles.jpg" alt="Preview dotfiles", class="thumbnail">
+				<h3> My dotfiles </h3>
+				<p> I am a linux enthusiast, so I would like to share my dotfiles. 
+				I haven't updated them in a while so may be a lot of problems. </p>
+				<a href="https://github.com/jcorea510/dotfiles.git" target="_blank">View Code</a>
+			</div>
+
+		</section>
+  	</body>
+</html>

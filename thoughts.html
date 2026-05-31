@@ -21,5 +21,322 @@
 			  <button type="button", class="line-button"> Thoughts </button>
 			</a>
 		</div>
+		
+		<section class="thoughts-container">
+
+			<center>
+				<h2 style="color: #fab387"> Project postmortems </h2>
+			</center>
+
+			<details class="thought-entry">
+				<summary> What would I redesing in my ALPR? </summary>
+				<div class="thought-content">
+					<h3>
+						Inference performance.
+					</h3>
+					<p> 
+						In my last update of ALPR GUI performance was very slow.
+						Why?, because there was not any information about
+						if it needs or does not need to keep running plate detection
+						and recognition, so that if, for example, the video
+						is 30 FPS then both task are executed in all the 30 frames.
+						Instead, I would give a time of relax when I suppose 
+						the car is still in front of the camera. That way
+						inference is performed just in few key frames.
+					</p>
+
+					<p> 
+						On the other hand, the program is totally sequential. 
+						I didn't know much about threats at the time. 
+						Now, instead I would separate some task in threats
+						for faster code execution. I think these task could be perfectly 
+						executed in parallel: models loading for detection and recognition,
+						consulting if recognition already was registered in database
+						and drawing results (region of detection and recognized 
+						license plate) in frame. 
+						
+						<center>
+							<img src="thoughts/better_alpr_ui.png",
+							alt="preview better alpr ui",
+							class="responsive-img">
+						</center>
+					</p>
+
+					<h3>
+						Training data.
+					</h3>
+					<p>
+						I used synthetic data for training models and that is fine.
+						But synthetic data generation method I tried was way time consuming.
+						Now I would try to use existing AI generative models to crop
+						chars and align and clean license templates from real images so that 
+						I may have better templates to use in the program 
+						to create randomized synthetic data.
+						Of course these AI models could also help me to introduce 
+						variants to create larger and diverser dataset. 
+					</p>
+				<div>
+			</details>
+
+			<details class="thought-entry">
+				<summary> Mistakes I made in my TV signal transmision. </summary>
+				<div class="thought-content">
+					<h3>
+						Proper handling lipsync.
+					</h3>
+
+					<p>
+						My solution for lipsync designed in this project wasn't correct. 
+						But I came to think a proper solution. 
+						In the project, I used a signal of known-fixed frequency 
+						(called sync carrier, because it remainds me to 
+						how supress carrier AM modulation is done) and 
+						sended it with the others. My idea was to demux this signal, 
+						measure its desphase with a phase to DC voltage convertion circuit. 
+						This phase error then was used to do phase shifting in the others
+						signals (video and audio) for correction. This
+						didn't work. Why?, because it actually does not have information
+						about how much phase error audio and video have,
+						it just has information about how that particular signal
+						changes it phase during transmition. The proper solution
+						is then, instead, to sum a unique signal of know-fixed frequency
+						at the very start of modulation stage for every
+						signal that must be syncronized; even before
+						multiplexing and FM transmision. Then in the receptor
+						to extract those unique signals and perform 
+						phase error measurement and phase shift is
+						done as before. In this case, each unique 
+						signal has information of all distorstions
+						suffered for the desired signals throught all stages
+						until demodulation. This is a possible architecture
+						I came with fast thinking:
+
+						<center>
+							<img src="thoughts/lipsync_solution.png",
+							alt="preview lipsync solution",
+							class="responsive-img">
+						</center>
+					</p>
+
+					<h3>
+						Better circuit and PCB designs.
+					</h3>
+
+					<p>
+						I remember I was short in time while designing FM transmisor and PCB
+						so I left some errors. 
+						FM modulator wasn't at the correct central frequency.
+						PCB weren't properly characterizied to know if 
+						trays were creating parasitic anthenas among others issues 
+						and I didn't knew how to design a proper phase error measurement.
+						So, if I could do this project again, I'll try to 
+						put emphasis in this bad designs.
+					</p>
+				</div>
+			</details>
+
+			<details class="thought-entry">
+				<summary> How to improve gesture controller? </summary>
+				<div class="thought-content">
+					<h3> 
+						Proper code design.
+					</h3>
+
+					<p>
+						In this project I did wanted to do the code
+						pure C++ focused using tools like OpenCVnet and 
+						a YOLO interface to run inference. 
+						While this worked fine for YOLO detection model,
+						it was not the case for YOLO classification model
+						since it has some obscure and different characteristics
+						that made it quite difficult to make it work. 
+						In this case I would go for just Python and run inference
+						on this models as subprocess. While this 
+						may be a dirty solution, it move to the side all 
+						complexity about unknow implementation of these
+						models and I can just focus on the rest of the project
+						implementation.
+					</p>
+
+					<h3> 
+						Proper code design.
+					</h3>
+
+					<p>
+						The reason of why models are heavy overtitted is quite clear:
+						Very small datase. Therefore, I need to improve this 
+						using larger datasets, and apply data augmentation as well 
+						as hyperparameter optimization. On the other hand, 
+						I think it should be good to add None category, that 
+						indicates that hand gesture do not belongs to a desired hand gesture 
+						to be recognizable. That way I can properly manage 
+						hand gesture that do not belong to my desired domain.
+					</p>
+				</div>
+			</details>
+
+			<center>
+				<h2 style="color: #fab387"> Engineering opinions and technical notes </h2>
+			</center>
+
+			<details class="thought-entry">
+				<summary> Why I prefer Rust for embedded systems? </summary>
+				<div class="thought-content">
+					<h3> 
+						Easier to deploy and safer code.
+					</h3>
+
+					<p>
+						Sometimes it is said that Rust close the gap between C/C++ and Python,
+						like a bridge, making it easier to write code, but also highly efficient 
+						which make it suitable for high performance applications.
+						I thinks this is true. This is one of the reasons 
+						I find Rust preferable for embedded systems which ussually 
+						are hard to code and sometimes high performance is required.
+					</p>
+
+					<p>
+						But of course that is not the only reason.
+						When you deals with embedded, debugging becames
+						difficult. If people forget to deal with an
+						possible error it could leads to serious 
+						integrity problems. Since Rust core language
+						is designed to try to force you to deal 
+						with every possible error and some 
+						possible memory bugs are catched at compile time,
+						it helps a lot to write memory safer code.
+					</p>
+
+					<p>
+						Rust is becoming a very popular language. 
+						Lot of people day by day are contributing to this language,
+						building libraries and correcting performance issues and so on.
+						One of the things I like is the modernization in 
+						embedded software. 
+						A lot of libraries have added very modern concepts
+						which allow to do complex stuff with less pain.
+						For example, a lot have been done in the field of 
+						embedded graphics allowing for highly customizable
+						and prettier UI.
+					</p>
+
+					<p>
+						Finally, but not less import Rust's async feature.
+						This feature allow for asyncronous code execution 
+						with a scheduler implemented directly in rust core language.
+						Why this is usefull? Well, typically if you want to
+						execute multiple task in parallel you need a scheduler to
+						tell task they can run for periods of time and them give 
+						time to other task. This is very difficult to code and ussually 
+						is done with operative systems. So in embedded systems
+						this is done typically with RTOS. 
+						But here is the drawback. RTOS is not very easy to use, 
+						also it results in very heavy binaries, and 
+						slower code. With Rust's Async this drawback is solved.
+						Code becames very simple and binaries are much more lighter and
+						code is faster. But sadly, this is not always true. 
+						When project tends to be larger RTOS becames faster and lighter
+						than Async. So this is a matter of needs.
+					</p>
+				</div>
+			</details>
+
+			<!-- <div> -->
+			<!-- 	<details> -->
+			<!-- 		<summary class="project-card"> Lessons from training an ML model with limited data. </summary> -->
+			<!-- 		<p>  -->
+			<!-- 			This hidden text will appear right below when you click the text above. -->
+			<!-- 		</p> -->
+			<!-- 	</details> -->
+			<!-- </div> -->
+
+			<details class="thought-entry">
+				<summary> What do I like about Linux and what it thought me? </summary>
+				<div class="thought-content">
+					<h3>
+						Customization
+					</h3>
+
+					<p> 
+						I am in love of how customizable Linux enviroments are so that you can 
+						not only make it visually appeal to your taste, but also 
+						make it more suitable for your needs. 
+						The fact it allow you to change everything from windows enviroment,
+						key functionality, drivers, and the lot of CLI tools that there are
+						that boost your proficency is amazing.
+					</p>
+
+					<p> 
+						I do specially like CLI tooling, so that I tried to change 
+						most of my daily live software needs into terminal based software:
+						code edition in Neovim, file explorer in Yazi, 
+						tmux for multiple terminal sessions, z for faster
+						movement to a directory, zsh for autocompletion, suggestion,
+						fuzzy finder, among other features, kitty for image
+						display in terminal feature and lot more.
+					</p>
+
+					<p>
+						And now, I hardly could live without hyprland. 
+						It allows me move very easy and fast throught windows,
+						add tags, pin them, resize, make them in a group for staking
+						them and many other features. 
+					</p>
+
+					<h3>
+						Free and open source
+					</h3>
+
+					<p>
+						Linux is also free, and its community intents to develop software 
+						solutions for free and open source. 
+						This do not only make technolgical advances accesible 
+						for all people, but also allow for safer and easier to integrate
+						software for peoples needs.
+					</p>
+				</div>
+			</details>
+
+			<details class="thought-entry">
+				<summary> When C/C++ is still better than Rust? </summary>
+				<div class="thought-content">
+					<h3>
+						Madurity
+					</h3>
+					<p>
+						C/C++ has been existing for a very long time. 
+						This has lead to very mature community with templates for 
+						many use cases and bugs solutions, some of them are slightly unknow for hobbiest
+						which is the larger base of Rust users.
+						<!-- Also, C/C++ may be deploy in very large variety of hardware and  -->
+						<!-- it is adaptable for old and new hardware. This is not totally  -->
+						<!-- possible for Rust, since its compiler has more strict rules -->
+						<!-- tha in some hardware may be different. -->
+					</p>
+
+					<h3>
+						Performance
+					</h3>
+					<p> 
+						A little bit of this has been said in why I do preffer Rust for embedded systems
+						entry. C/C++ parallel execution in embedded system are done with RTOS.
+						And since C/C++ community is more mature than Rust, RTOS solutions
+						are also maturer than RUST ones. 
+						For that reason in large projects or project were performance is
+						critical, then C/C++ are better programming language options.
+					</p>
+				</div>
+			</details>
+
+			<center>
+				<h2 style="color: #fab387"> Books and notes </h2>
+			</center>
+
+			<details class="thought-entry">
+				<summary> Demostrability in science </summary>
+				<div class="thought-content">
+				</div>
+			</details>
+		</section>
 	</body>
 </html>

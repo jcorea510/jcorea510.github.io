@@ -215,5 +215,100 @@ a:hover {
 	}
 }
 
+/* =========================
+   THOUGHTS
+========================= */
+
+.thoughts-container {
+	max-width: 1000px;
+	margin: auto;
+	padding: 30px;
+}
+
+.thought-entry {
+	background-color: rgba(49, 50, 68, 0.92);
+	border: 1px solid #45475a;
+	border-radius: 20px;
+	margin-bottom: 25px;
+	overflow: hidden;
+	box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+	transition: all 0.3s ease;
+}
+
+.thought-entry:hover {
+	border-color: #cba6f7;
+	box-shadow: 0 8px 30px rgba(203,166,247,0.15);
+}
+
+.thought-entry summary {
+	list-style: none;
+	cursor: pointer;
+	padding: 22px 28px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #cba6f7;
+	background-color: rgba(24,24,37,0.7);
+	transition: all 0.25s ease;
+}
+
+.thought-entry summary:hover {
+	background-color: rgba(49,50,68,0.9);
+}
+
+.thought-entry summary::-webkit-details-marker {
+	display: none;
+}
+
+.thought-entry summary::after {
+	content: "+";
+	float: right;
+	color: #f5c2e7;
+	font-size: 1.4rem;
+	transition: transform 0.3s ease;
+}
+
+.thought-entry[open] summary::after {
+	content: "−";
+}
+
+.thought-content {
+	padding: 25px 30px;
+}
+
+.thought-content h3 {
+	color: #89b4fa;
+	margin-top: 1.5rem;
+}
+
+.thought-content p {
+	color: #bac2de;
+	line-height: 1.8;
+	text-align: justify;
+}
+
+.thought-content blockquote {
+	border-left: 3px solid #cba6f7;
+	padding-left: 15px;
+	margin-left: 0;
+	color: #a6adc8;
+	font-style: italic;
+}
+
+.thought-tag {
+	display: inline-block;
+	background-color: #45475a;
+	color: #cdd6f4;
+	padding: 4px 10px;
+	border-radius: 999px;
+	font-size: 0.8rem;
+	margin-right: 8px;
+	margin-bottom: 15px;
+}
 
 
+.responsive-img {
+  width: 95%; /* Adjust this percentage to control how much of the div the image takes */
+  height: auto;
+  display: block; /* Removes unwanted spacing below the image */
+  max-width: 100%; /* Ensures the image never overflows its parent */
+}

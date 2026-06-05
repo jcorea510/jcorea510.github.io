@@ -271,44 +271,162 @@ a:hover {
 	content: "−";
 }
 
-.thought-content {
-	padding: 25px 30px;
-}
-
-.thought-content h3 {
-	color: #89b4fa;
-	margin-top: 1.5rem;
-}
-
-.thought-content p {
-	color: #bac2de;
-	line-height: 1.8;
-	text-align: justify;
-}
-
-.thought-content blockquote {
-	border-left: 3px solid #cba6f7;
-	padding-left: 15px;
-	margin-left: 0;
-	color: #a6adc8;
-	font-style: italic;
-}
-
-.thought-tag {
-	display: inline-block;
-	background-color: #45475a;
-	color: #cdd6f4;
-	padding: 4px 10px;
-	border-radius: 999px;
-	font-size: 0.8rem;
-	margin-right: 8px;
-	margin-bottom: 15px;
-}
-
-
 .responsive-img {
   width: 95%; /* Adjust this percentage to control how much of the div the image takes */
   height: auto;
   display: block; /* Removes unwanted spacing below the image */
   max-width: 100%; /* Ensures the image never overflows its parent */
+}
+
+/* =========================
+   ARTICLES
+========================= */
+
+.thought-article {
+	max-width: 900px;
+	margin: 40px auto;
+	padding: 40px;
+
+	background-color: rgba(49, 50, 68, 0.92);
+	border: 1px solid #45475a;
+	border-radius: 24px;
+
+	backdrop-filter: blur(10px);
+	box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+.thought-article h1 {
+	color: #fab387;
+	font-size: 2.4rem;
+	margin-bottom: 0.5rem;
+}
+
+.thought-article h2 {
+	color: #89b4fa;
+	margin-top: 2.5rem;
+	margin-bottom: 1rem;
+	padding-bottom: 0.4rem;
+
+	border-bottom: 1px solid #45475a;
+}
+
+.thought-article h3 {
+	color: #cba6f7;
+	margin-top: 2rem;
+	margin-bottom: 0.75rem;
+}
+
+.thought-article p {
+	color: #bac2de;
+	line-height: 1.9;
+	text-align: justify;
+	margin-bottom: 1.2rem;
+}
+
+.thought-article ul,
+.thought-article ol {
+	color: #bac2de;
+	line-height: 1.8;
+	padding-left: 2rem;
+}
+
+.thought-article li {
+	margin-bottom: 0.5rem;
+}
+
+.thought-article strong {
+	color: #f9e2af;
+}
+
+.thought-article code {
+	background-color: #181825;
+	color: #f5c2e7;
+
+	padding: 2px 6px;
+	border-radius: 6px;
+	font-size: 0.95rem;
+}
+
+.thought-article pre {
+	background-color: #181825;
+
+	padding: 18px;
+	border-radius: 14px;
+
+	overflow-x: auto;
+
+	border: 1px solid #313244;
+}
+
+.thought-article blockquote {
+	border-left: 4px solid #cba6f7;
+
+	padding-left: 18px;
+	margin: 1.5rem 0;
+
+	color: #a6adc8;
+	font-style: italic;
+}
+
+.thought-article img {
+	width: 95%;
+	max-width: 100%;
+
+	display: block;
+	margin: 25px auto;
+
+	border-radius: 16px;
+	border: 2px solid #45475a;
+
+	box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.article-meta {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+
+	margin-bottom: 2rem;
+}
+
+.article-date,
+.article-category {
+	background-color: #313244;
+
+	color: #cdd6f4;
+
+	padding: 5px 12px;
+
+	border-radius: 999px;
+
+	font-size: 0.85rem;
+}
+
+/* tag as bubbles */
+
+.tag-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px; /* Space between bubbles */
+	align-items: center;
+}
+
+.tag-bubble {
+	background: #313244;
+	color: #cdd6f4;
+	padding: 6px 14px;
+	border: 1px solid #45475a;
+	border-radius: 50px; /* Fully rounded edges */
+	font-size: 0.85rem;
+	font-weight: 500;
+	display: inline-block;
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+.tag-bubble:hover {
+	background: #45475a;
+	border-color: #cba6f7;
+	transform: translateY(-2px);
+	color: #cba6f7;
 }

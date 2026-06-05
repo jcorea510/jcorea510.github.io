@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<link rel="stylesheet" href="../../../styles/style.css" />
+		<title> c vs rust </title>
+  	</head>
+
+	<body class="bg">
+		<div style="align-items: left; background-color:#1e1e2e; padding: 10px 20px">
+			<a href="../../../index.html">
+		  		<button type="button", class="line-button"> Home </button>
+			</a>
+
+			<a href="../../../projects.html">
+			  <button type="button", class="line-button"> Projects </button>
+			</a>
+
+			<a href="../../../thoughts.html">
+			  <button type="button", class="line-button"> Thoughts </button>
+			</a>
+		</div>
+
+		<article class="thought-article">
+
+			<h1> When C/C++ is still better than Rust? </h1>
+
+			<div class="article-meta">
+				<span class="article-date">2026-06-02</span>
+				<span class="article-category">Engineering</span>
+			</div>
+
+			<h2> Introduction </h2>
+			In the previous note: "Why I prefer rust for embedded systems"
+			I talked about some distinc Rust features that makes 
+			software easier to me, specially embedded software.
+			In this article I will expand that talk but about
+			its drawbacks.
+
+			<h2> Madurity </h2> 
+			<p> 
+				C/C++ has been existing for a very long time.
+				This has lead to very mature community with templates for many use cases and bugs solutions,
+				some of them are slightly unknown for hobbiest which is the larger base of Rust users.
+				In the field of embedded system, 
+				since tooling is still too immature, software engineers 
+				have to do a lot of work to get equivalent tooling of what already exist in C,
+				and then it leads to dark corners about what the language can 
+				express and what it cannot. 
+				This becomes even more terrible when you have to deal with 
+				custom chips or newer hardware, because you can not expect 
+				that Rust compiler can run on that hardware and 
+				since Rust compiler is very strict about hardware access,
+				the there is not other option than use wrap Rust code 
+				into unsafe Rust (unsafe {//code}), but then this cause
+				not only that you cannot use Rust features, 
+				but unsafe Rust is not simpler to write than C code. 
+				I dare to say it is even harder. Also, you will
+				need to rewrite a lot of code to make it suitable for 
+				the hardware. Then, there is no gain of use Rust in that case,
+				unless you are using Software than someone else already wrote 
+				and tested with a large team of tester/engineers.
+			</p>
+
+			<h2> Performance </h2> 
+			<p> 
+				A little bit of this has been said in why I do prefer Rust for embedded systems entry. 
+				C/C++ parallel execution in embedded system are done with RTOS.
+				And since C/C++ community is more mature than Rust, RTOS solutions are also maturer than RUST ones.
+				For that reason in large projects or project were performance is critical, 
+				then C/C++ are better programming language options. 
+				But that is not all the matter. In Linux foundation, not
+				much time ago a movement of rewritten a large portion of legacy 
+				code into Rust has lead to some interesting founds. 
+				Rust version are much slower than C counter side.
+				One could argue that is just a think of correction some algorithms.
+				But that is not entirely true. You cannot expect to do a translation
+				C to Rust one line per line, that is impossible and it makes no sense.
+				Then it becomes essentially a problem of Rust capacity to 
+				translate that code. 
+				When software is translated from one language to other, 
+				it is quite common that some dark corners of languages 
+				comes to light and then are appears in bugs and performance issues
+				that are not easy to solve.
+			</p>
+
+		</article>
+	</body>
+</html>
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<link rel="stylesheet" href="../../../styles/style.css" />
+		<title> alpr redesing </title>
+  	</head>
+
+	<body class="bg">
+		<div style="align-items: left; background-color:#1e1e2e; padding: 10px 20px">
+			<a href="../../../index.html">
+		  		<button type="button", class="line-button"> Home </button>
+			</a>
+
+			<a href="../../../projects.html">
+			  <button type="button", class="line-button"> Projects </button>
+			</a>
+
+			<a href="../../../thoughts.html">
+			  <button type="button", class="line-button"> Thoughts </button>
+			</a>
+		</div>
+
+		<article class="thought-article">
+
+			<h1>  What would I redesign in my ALPR? </h1>
+
+			<div class="article-meta">
+				<span class="article-date">2026-06-02</span>
+				<span class="article-category">Engineering</span>
+			</div>
+
+			<h2> Inference performance. </h2> 
+			<p> 
+				In my last update of ALPR GUI performance was very slow. 
+				Why?, because there was not any information about if it needs
+				or does not need to keep running plate detection and recognition, so that, 
+				if for example, the video is 30 FPS then both task are executed in all the 30 frames. 
+				Instead, I would give a time of relax when I suppose the car is still in front of the camera.
+				That way inference is performed just in few key frames. 
+			</p> 
+
+			<p> 
+				On the other hand, the program is totally sequential.
+				I didn't know much about threats at the time. Now, instead I would separate some task in threats
+				for faster code execution. I think these task could be perfectly executed in parallel:
+				models loading for detection and recognition, 	
+				consulting if recognition already was registered in database and drawing results
+				(region of detection and recognized license plate) in frame.
+
+				<center> 
+					<img src="better_alpr_ui.png", alt="preview better alpr ui">
+				</center> 
+			</p> 
+
+			<h2> Training data. </h2>
+			<p> 
+				I used synthetic data for training models and that is fine. 
+				But synthetic data generation method I tried was way time consuming.
+				Now I would try to use existing AI generative models to crop chars 
+				and align and clean license templates from real images so that 
+				I may have better templates to use in the program to create randomized synthetic data.
+				Of course these AI models could also help me to introduce variants to create
+				larger and diverse dataset.
+			</p>
+		</article>
+	</body>
+</html>
+

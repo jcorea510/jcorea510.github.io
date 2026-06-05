@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<link rel="stylesheet" href="../../../styles/style.css" />
+		<title> gesture controller improves </title>
+  	</head>
+
+	<body class="bg">
+		<div style="align-items: left; background-color:#1e1e2e; padding: 10px 20px">
+			<a href="../../../index.html">
+		  		<button type="button", class="line-button"> Home </button>
+			</a>
+
+			<a href="../../../projects.html">
+			  <button type="button", class="line-button"> Projects </button>
+			</a>
+
+			<a href="../../../thoughts.html">
+			  <button type="button", class="line-button"> Thoughts </button>
+			</a>
+		</div>
+
+		<article class="thought-article">
+
+			<h1> How to improve gesture controller? </h1>
+
+			<div class="article-meta">
+				<span class="article-date">2026-06-02</span>
+				<span class="article-category">Engineering</span>
+			</div>
+
+			<h2> Proper code design. </h2>
+			<p> 
+				In this project I did wanted to do the code pure C++ focused using tools like OpenCVnet 
+				and a YOLO interface to run inference. While this worked fine for YOLO detection model,
+				it was not the case for YOLO classification model since it has some obscure
+				and different characteristics that made it quite difficult to make it work.
+				In this case I would go for just Python and run inference on this models as subprocess.
+				While this may be a dirty solution, it move to the side all complexity about unknown implementation
+				of these models and I can just focus on the rest of the project implementation.
+			</p> 
+
+			<h2> Proper code design. </h2>
+			<p> 
+				The reason of why models are heavy overtitted is quite clear: Very small dataset.
+				Therefore, I need to improve this using larger datasets, and apply data augmentation 
+				as well as hyperparameter optimization. On the other hand,
+				I think it should be good to add None category, that indicates that hand gesture
+				do not belongs to a desired hand gesture to be recognizable.
+				That way I can properly manage hand gesture that do not belong to my desired domain.
+			</p>
+		</article>
+	</body>
+</html>
+

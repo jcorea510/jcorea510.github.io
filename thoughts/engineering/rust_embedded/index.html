@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<link rel="stylesheet" href="../../../styles/style.css" />
+		<title> alpr redesign </title>
+  	</head>
+
+	<body class="bg">
+		<div style="align-items: left; background-color:#1e1e2e; padding: 10px 20px">
+			<a href="../../../index.html">
+		  		<button type="button", class="line-button"> Home </button>
+			</a>
+
+			<a href="../../../projects.html">
+			  <button type="button", class="line-button"> Projects </button>
+			</a>
+
+			<a href="../../../thoughts.html">
+			  <button type="button", class="line-button"> Thoughts </button>
+			</a>
+		</div>
+
+		<article class="thought-article">
+
+			<h1>Why I Prefer Rust for Embedded Systems</h1>
+
+			<div class="article-meta">
+				<span class="article-date">2026-06-02</span>
+				<span class="article-category">Engineering</span>
+			</div>
+
+			<h2> Introduction </h2>
+
+			<p>
+				To start with, I will say that I am writing this from 
+				a hobbiest perspective. I do not think that Rust is 
+				better than C++ nor even think about C in the world
+				of embedded software. Maybe in the article about
+				"When C/C++ is still better than Rust" I will talk about it.
+			</p>
+
+			<h2> Easy deploytments and safer code</h2>
+
+			<p>
+				Sometimes it is said that Rust close the gap between C/C++ and Python,
+				like a bridge, making it easier to write code,
+				but also highly efficient which make it suitable for high performance applications.
+				I thinks this is true. This is one of the reasons I find Rust preferable for embedded systems
+				which usually are hard to code and sometimes high performance is required.
+				There a some features that make it easier from my perspective to make something
+				work without too much pain. For example: 
+			</p>
+			
+			<p>
+				Cargo: This is the Rust build system and package manager. 
+				Is like a mix of cmake and pip. It combines some powerful 
+				characteristics of both, like the capacity to stablish 
+				how your programs is going to be built, what packages 
+				do you need, what version of those packages you need, 
+				flags to control build version, to publish your package
+				and large etcetera.
+			</p>
+
+			<p>
+				Syntax: I find the rust syntax much more understandable than C/C++.
+				C has been always a pain for me because of macros, 
+				and the requirement to manually manipulate memory.
+				This becomes a nightmare when very much calls 
+				to functions and pointers there are because to me 
+				there is point I no longer know what is the data I am 
+				manipulation.
+				And since C is very much simpler language, it result in more
+				verbose code in comparison to rust.
+				In addition rust has some keywords and features that make
+				easier to deal with data: For example enums allow
+				easier description of data types and manipulation
+				of data thanks to impl and arm matches. 
+				But also special enums like Option<> or Result<>
+				that makes easier to deal with exceptions and returned values
+				from function calls.
+			</p>
+
+			<p> 
+				Compiler: But of course those are not the only reason.
+				When you deals with embedded, debugging became difficult.
+				If people forget to deal with an possible error it could leads to serious integrity problems.
+				Since Rust core language is designed to try to force you to deal with every possible error
+				and some possible memory bugs are catched at compile time, it helps a lot to write memory safer code,
+				since compiler simple will not compile your code. 
+				Furthermore, it also give you much more detailed hints about what 
+				is the possible error that made your code fail, 
+				resulting in less wasted time trying to figure out what happened, 
+				why your code failed.
+			</p>
+
+			<p> 
+				Tooling: Rust is becoming a very popular language.
+				Lot of people day by day are contributing to this language,
+				building libraries and correcting performance issues and so on.
+				One of the things I like is the modernization in embedded software.
+				A lot of libraries have added very modern concepts which allow to do complex stuff with less pain.
+				For example, a lot have been done in the field of embedded graphics 
+				allowing for highly customizable and prettier UI.
+			</p>
+
+			<p> 
+				Async: Finally, but not less import Rust's async feature.
+				This feature allow for asynchronous code execution with a scheduler
+				implemented directly in rust core language. Why this is useful? Well,
+				typically if you want to execute multiple task in parallel you need a scheduler
+				to tell task they can run for periods of time and them give time to other task.
+				This is very difficult to code and usually is done with operative systems.
+				So in embedded systems this is done typically with RTOS. But here is the drawback.
+				RTOS is not very easy to use, also it results in very heavy binaries, and slower code.
+				With Rust's Async this drawback is solved. Code becomes very simple 
+				and binaries are much more lighter and code is faster.
+				But sadly, this is not always true.
+				When project tends to be larger RTOS became faster and lighter than Async.
+				So this is a matter of needs.
+			</p>
+
+		</article>
+
+	</body>
+</html>

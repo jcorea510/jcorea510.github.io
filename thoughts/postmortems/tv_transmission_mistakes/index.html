@@ -4,7 +4,7 @@
     	<meta charset="UTF-8" />
     	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
     	<link rel="stylesheet" href="../../../styles/style.css" />
-		<title> tv signal transmistion </title>
+		<title> tv signal transmission </title>
   	</head>
 
 	<body class="bg">
@@ -31,7 +31,7 @@
 				<span class="article-category">Engineering</span>
 			</div>
 
-			<h2> Proper handling lipsync. </h2>
+			<h2> Proper handling lip-sync. </h2>
 			<p> 
 				My solution for lip-sync designed in this project wasn't correct.
 				But I came to think a proper solution. In the project, I used a signal of known-fixed frequency
@@ -41,7 +41,7 @@
 				This phase error then was used to do phase shifting in the others signals (video and audio) for correction.
 				This didn't work. Why?, because it actually does not have information about 
 				how much phase error audio and video have, it just has information about how that particular signal
-				changes it phase during transmission. The proper solution is then, instead, 
+				changes its phase during transmission. The proper solution is then, instead, 
 				to sum a unique signal of know-fixed frequency at the very start of modulation stage for every signal
 				that must be synchronized; even before multiplexing and FM transmission.
 				Then in the receptor to extract those unique signals and perform phase error measurement 
@@ -56,10 +56,10 @@
 
 			<h2> Better circuit and PCB designs. </h2> 
 			<p> 
-				I remember I was short in time while designing FM transmitter and PCB so I left some errors.
+				I remember I was short in time while designing FM transmitter and PCB, so I left some errors.
 				FM modulator wasn't at the correct central frequency. 
 				PCB weren't properly characterized to know if trays were creating parasitic antennas among others
-				issues and I didn't knew how to design a proper phase error measurement.
+				issues and I didn't know how to design a proper phase error measurement.
 				So, if I could do this project again, I'll try to put emphasis in this bad designs.
 			</p>
 		</article>

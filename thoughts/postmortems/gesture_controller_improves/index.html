@@ -37,18 +37,18 @@
 				and a YOLO interface to run inference. While this worked fine for YOLO detection model,
 				it was not the case for YOLO classification model since it has some obscure
 				and different characteristics that made it quite difficult to make it work.
-				In this case I would go for just Python and run inference on this models as subprocess.
-				While this may be a dirty solution, it move to the side all complexity about unknown implementation
+				In this case I would go for just Python and run inference on these models as subprocess.
+				While this may be a dirty solution, it moves to the side all complexity about unknown implementation
 				of these models and I can just focus on the rest of the project implementation.
 			</p> 
 
 			<h2> Proper code design. </h2>
 			<p> 
-				The reason of why models are heavy overtitted is quite clear: Very small dataset.
+				The reason of why models are heavy overfitted is quite clear: Very small dataset.
 				Therefore, I need to improve this using larger datasets, and apply data augmentation 
 				as well as hyperparameter optimization. On the other hand,
 				I think it should be good to add None category, that indicates that hand gesture
-				do not belongs to a desired hand gesture to be recognizable.
+				do not belong to a desired hand gesture to be recognizable.
 				That way I can properly manage hand gesture that do not belong to my desired domain.
 			</p>
 		</article>

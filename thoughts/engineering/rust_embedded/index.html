@@ -41,13 +41,13 @@
 				"When C/C++ is still better than Rust" I will talk about it.
 			</p>
 
-			<h2> Easy deploytments and safer code</h2>
+			<h2> Easy deployments and safer code</h2>
 
 			<p>
 				Sometimes it is said that Rust close the gap between C/C++ and Python,
 				like a bridge, making it easier to write code,
 				but also highly efficient which make it suitable for high performance applications.
-				I thinks this is true. This is one of the reasons I find Rust preferable for embedded systems
+				I think this is true. This is one of the reasons I find Rust preferable for embedded systems
 				which usually are hard to code and sometimes high performance is required.
 				There a some features that make it easier from my perspective to make something
 				work without too much pain. For example: 
@@ -55,8 +55,8 @@
 			
 			<p>
 				Cargo: This is the Rust build system and package manager. 
-				Is like a mix of cmake and pip. It combines some powerful 
-				characteristics of both, like the capacity to stablish 
+				Is like a mix of CMake and pip. It combines some powerful 
+				characteristics of both, like the capacity to establish 
 				how your programs is going to be built, what packages 
 				do you need, what version of those packages you need, 
 				flags to control build version, to publish your package
@@ -71,9 +71,9 @@
 				to functions and pointers there are because to me 
 				there is point I no longer know what is the data I am 
 				manipulation.
-				And since C is very much simpler language, it result in more
+				And since C is very much simpler language, it results in more
 				verbose code in comparison to rust.
-				In addition rust has some keywords and features that make
+				In addition, rust has some keywords and features that make
 				easier to deal with data: For example enums allow
 				easier description of data types and manipulation
 				of data thanks to impl and arm matches. 
@@ -84,12 +84,12 @@
 
 			<p> 
 				Compiler: But of course those are not the only reason.
-				When you deals with embedded, debugging became difficult.
-				If people forget to deal with an possible error it could leads to serious integrity problems.
+				When you deal with embedded, debugging became difficult.
+				If people forget to deal with an possible error it could lead to serious integrity problems.
 				Since Rust core language is designed to try to force you to deal with every possible error
-				and some possible memory bugs are catched at compile time, it helps a lot to write memory safer code,
+				and some possible memory bugs are caught at compile time, it helps a lot to write memory safer code,
 				since compiler simple will not compile your code. 
-				Furthermore, it also give you much more detailed hints about what 
+				Furthermore, it also gives you much more detailed hints about what 
 				is the possible error that made your code fail, 
 				resulting in less wasted time trying to figure out what happened, 
 				why your code failed.
@@ -107,7 +107,7 @@
 
 			<p> 
 				Async: Finally, but not less import Rust's async feature.
-				This feature allow for asynchronous code execution with a scheduler
+				This feature allows for asynchronous code execution with a scheduler
 				implemented directly in rust core language. Why this is useful? Well,
 				typically if you want to execute multiple task in parallel you need a scheduler
 				to tell task they can run for periods of time and them give time to other task.

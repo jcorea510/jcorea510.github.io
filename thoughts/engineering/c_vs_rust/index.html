@@ -33,7 +33,7 @@
 
 			<h2> Introduction </h2>
 			In the previous note: "Why I prefer rust for embedded systems"
-			I talked about some distinc Rust features that makes 
+			I talked about some distinct Rust features that makes 
 			software easier to me, specially embedded software.
 			In this article I will expand that talk but about
 			its drawbacks.
@@ -52,7 +52,7 @@
 				custom chips or newer hardware, because you can not expect 
 				that Rust compiler can run on that hardware and 
 				since Rust compiler is very strict about hardware access,
-				the there is not other option than use wrap Rust code 
+				the there is no other option than use wrap Rust code 
 				into unsafe Rust (unsafe {//code}), but then this cause
 				not only that you cannot use Rust features, 
 				but unsafe Rust is not simpler to write than C code. 
@@ -68,7 +68,7 @@
 				A little bit of this has been said in why I do prefer Rust for embedded systems entry. 
 				C/C++ parallel execution in embedded system are done with RTOS.
 				And since C/C++ community is more mature than Rust, RTOS solutions are also maturer than RUST ones.
-				For that reason in large projects or project were performance is critical, 
+				For that reason in large projects or project where performance is critical, 
 				then C/C++ are better programming language options. 
 				But that is not all the matter. In Linux foundation, not
 				much time ago a movement of rewritten a large portion of legacy 
@@ -76,7 +76,7 @@
 				Rust version are much slower than C counter side.
 				One could argue that is just a think of correction some algorithms.
 				But that is not entirely true. You cannot expect to do a translation
-				C to Rust one line per line, that is impossible and it makes no sense.
+				C to Rust one line per line, that is impossible, and it makes no sense.
 				Then it becomes essentially a problem of Rust capacity to 
 				translate that code. 
 				When software is translated from one language to other, 

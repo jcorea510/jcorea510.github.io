@@ -45,6 +45,36 @@
 			</div>
 
 			<div class="project-card">
+				<img src="projects/motor_controller_pwm.jpg" alt="Preview motor pwm", class="thumbnail">
+				<h3> PWM motor speed controller </h3>
+				<p> This project consist in a 12 VDC PWM controlled motor 
+				that works in automatic or manual mode. 
+				In manual mode speed is controlled just by a potentiometer
+				so that it can't compensate speed when a load is added to 
+				motor, in automatic mode a negative retro-alimentation is
+				added so that with a proportional controller in closed loop
+				motor speed is compensated when a load is added. 
+				It also has speed indicator with LEDs, an emergency stop
+				button and the PWM signal was generated without integrated circuits. </p>
+				<!-- <a href="projects/ControlVelocidadMotorManualAutomaticoPWM.pdf", target="_blank">Read Inform</a> -->
+				<a href="https://drive.google.com/file/d/1CSZ0Sj8j0Bby45WKgHUANJX7UcdBVxIn/view?usp=sharing",
+					target="_blank">Read Inform</a>
+			</div>
+
+			<div class="project-card">
+				<img src="projects/risc-v.png" alt="Preview risc-v", class="thumbnail">
+				<h3> RISC-V microarchitecure in verilog </h3>
+				<p> 
+					This is an implementation of RISC-V architecture using Verilog in
+					Xilinx's Vivado software. The microarchitecture is multi-cycle pipeline,
+					and it includes hazard detection. It was left in simulation stage, and it
+					has non synthesizable modules. 
+				</p>
+				<a href="https://github.com/jcorea510/Procesador-RISC-V.git", target="_blank">View Code</a>
+			</div>
+
+
+			<div class="project-card">
 				<img src="projects/database.png" alt="Preview sql sensors", class="thumbnail">
 				<h3> SQL Sensors </h3>
 				<p>
@@ -61,37 +91,6 @@
 				</p>
 				<a href="https://github.com/jcorea510/mini_projects_lang/tree/main/sql_sensors"
 					target="_blank"> View Code</a>
-			</div>
-
-			<div class="project-card">
-				<img src="projects/stm32multidevice.jpeg" alt="Preview stm32multidevice", class="thumbnail">
-				<h3> STM32 multidevice using Rust's async feature instead of RTOS </h3>
-				<p> This was a very simple example of how to program embedded software
-				in rust embassy. Rust is not just easier than C/C++ to develop
-				high performance and memory safer embedded software, but 
-				async feature allow executing parallel task without RTOS,
-				while at same time results in relative faster programs and 
-				smaller programs, if the project does not require very large code,
-				in contrary case then RTOS is better for smaller and faster programs. </p>
-				<a href="https://github.com/jcorea510/mini_projects_lang/tree/main/stm32multidevice"
-					target="_blank"> View Code</a>
-			</div>
-
-			<div class="project-card">
-				<img src="projects/motor_controller_pwm.jpg" alt="Preview motor pwm", class="thumbnail">
-				<h3> PWM motor speed controller </h3>
-				<p> This project consist in a 12 VDC PWM controlled motor 
-				that works in automatic or manual mode. 
-				In manual mode speed is controlled just by a potentiometer
-				so that it can't compensate speed when a load is added to 
-				motor, in automatic mode a negative retro-alimentation is
-				added so that with a proportional controller in closed loop
-				motor speed is compensated when a load is added. 
-				It also has speed indicator with LEDs, an emergency stop
-				button and the PWM signal was generated without integrated circuits. </p>
-				<!-- <a href="projects/ControlVelocidadMotorManualAutomaticoPWM.pdf", target="_blank">Read Inform</a> -->
-				<a href="https://drive.google.com/file/d/1CSZ0Sj8j0Bby45WKgHUANJX7UcdBVxIn/view?usp=sharing",
-					target="_blank">Read Inform</a>
 			</div>
 
 			<div class="project-card">
@@ -136,18 +135,6 @@
 			</div>
 
 			<div class="project-card">
-				<img src="projects/risc-v.png" alt="Preview risc-v", class="thumbnail">
-				<h3> RISC-V microarchitecure in verilog </h3>
-				<p> 
-					This is an implementation of RISC-V architecture using Verilog in
-					Xilinx's Vivado software. The microarchitecture is multi-cycle pipeline,
-					and it includes hazard detection. It was left in simulation stage, and it
-					has non synthesizable modules. 
-				</p>
-				<a href="https://github.com/jcorea510/Procesador-RISC-V.git", target="_blank">View Code</a>
-			</div>
-
-			<div class="project-card">
 				<img src="projects/serial_protocols.png" alt="Preview serial protocols spi", class="thumbnail">
 				<h3> Serial protocols design </h3>
 				<p> 
@@ -160,6 +147,35 @@
 					test were successfully achieved.
 				</p>
 				<a href="https://github.com/jcorea510/mini_projects_lang/tree/main/serial_protocols"
+					target="_blank"> View Code</a>
+			</div>
+
+			<div class="project-card">
+				<img src="projects/oscilloscope.png" alt="Preview oscilloscope", class="thumbnail">
+				<h3> Oscilloscope with STM32 </h3>
+				<p> 
+				I did not have an oscilloscope and I needed one to test some small projects
+				I was doing, so I came with the idea to develop my own oscilloscope using
+				STM32F103C8T6's ADC and and GUI written in Rust to visualize data comming 
+				from embedded device throught UART.
+				To maximize speed I used ADC DMA and freertos, then I send raw data to PC.
+				In the PC I do any other process like adding cursors, stop reading, export data, etc.
+				</p>
+				<a href="https://github.com/jcorea510/mini_projects_lang/tree/main/osciolloscope"
+					target="_blank"> View Code</a>
+			</div>
+
+			<div class="project-card">
+				<img src="projects/stm32multidevice.jpeg" alt="Preview stm32multidevice", class="thumbnail">
+				<h3> STM32 multidevice using Rust's async feature instead of RTOS </h3>
+				<p> This was a very simple example of how to program embedded software
+				in rust embassy. Rust is not just easier than C/C++ to develop
+				high performance and memory safer embedded software, but 
+				async feature allow executing parallel task without RTOS,
+				while at same time results in relative faster programs and 
+				smaller programs, if the project does not require very large code,
+				in contrary case then RTOS is better for smaller and faster programs. </p>
+				<a href="https://github.com/jcorea510/mini_projects_lang/tree/main/stm32multidevice"
 					target="_blank"> View Code</a>
 			</div>
 
@@ -191,18 +207,6 @@
 			</div>
 
 			<div class="project-card">
-				<img src="projects/mnist.png" alt="Preview mnist", class="thumbnail">
-				<h3> MNIST classification </h3>
-				<p> A comparative study of classification algorithms using
-				MNIST dataset. Implementations for SVM, CNN, Softmax, KNN
-				and RDF was developed in Python. Then a long study 
-				of features, data augmentation effect, hyperparameter effect,
-				etc. was executed to know the best algorithm: 
-				The best classification was CNN. </p>
-				<a href="https://github.com/jcorea510/MNIST-classificador.git", target="_blank">View Code</a>
-			</div>
-
-			<div class="project-card">
 				<img src="projects/SSB_simulator.JPG" alt="Preview ssb simulator", class="thumbnail">
 				<h3> SSB Simulator </h3>
 				<p> This is an app developed in Python to simulate amplitude modulated transitions
@@ -219,25 +223,51 @@
 			</div>
 
 			<div class="project-card">
-				<img src="projects/ocean_depth_stimation.jpg" alt="Preview ocean depth", class="thumbnail">
-				<h3> Costa Rica's seafloor depth estimation </h3>
-				<p> Here a portion of Costa Rica seafloor depth was estimated using 
-				different approaches of regression models: 
-				Weighted linear regression, linear regression, and polynomial 
-				regression algorithms coded in Octave/Matlab. </p>
-				<a href="https://github.com/jcorea510/Modelo-Costa-Costa-Rica" target="_blank">View Code</a>
+				<img src="projects/mnist.png" alt="Preview mnist", class="thumbnail">
+				<h3> MNIST classification </h3>
+				<p> A comparative study of classification algorithms using
+				MNIST dataset. Implementations for SVM, CNN, Softmax, KNN
+				and RDF was developed in Python. Then a long study 
+				of features, data augmentation effect, hyperparameter effect,
+				etc. was executed to know the best algorithm: 
+				The best classification was CNN. </p>
+				<a href="https://github.com/jcorea510/MNIST-classificador.git", target="_blank">View Code</a>
 			</div>
 
+			<!-- <div class="project-card"> -->
+			<!-- 	<img src="projects/ocean_depth_stimation.jpg" alt="Preview ocean depth", class="thumbnail"> -->
+			<!-- 	<h3> Costa Rica's seafloor depth estimation </h3> -->
+			<!-- 	<p> Here a portion of Costa Rica seafloor depth was estimated using  -->
+			<!-- 	different approaches of regression models:  -->
+			<!-- 	Weighted linear regression, linear regression, and polynomial  -->
+			<!-- 	regression algorithms coded in Octave/Matlab. </p> -->
+			<!-- 	<a href="https://github.com/jcorea510/Modelo-Costa-Costa-Rica" target="_blank">View Code</a> -->
+			<!-- </div> -->
+
+			<!-- <div class="project-card"> -->
+			<!-- 	<img src="projects/udpchat.png" alt="Preview udpChat", class="thumbnail"> -->
+			<!-- 	<h3> UDP Chat App </h3> -->
+			<!-- 	<p> In this C++ project two versions of chat app example using UDP  -->
+			<!-- 	communication protocol are showcased (A P2P and Client-Server-Client version). -->
+			<!-- 	While UDP is not good for -->
+			<!-- 	this kind of applications since it is a connectionless protocol, -->
+			<!-- 	so there is no guarantee that message is going to be received nor its order nor error correction; -->
+			<!-- 	I consider it still interesting to know its features and drawbacks. </p> -->
+			<!-- 	<a href="https://github.com/jcorea510/mini_projects_lang/tree/main/udpChat" target="_blank">View Code</a> -->
+			<!-- </div> -->
 			<div class="project-card">
-				<img src="projects/udpchat.png" alt="Preview udpChat", class="thumbnail">
-				<h3> UDP Chat App </h3>
-				<p> In this C++ project two versions of chat app example using UDP 
-				communication protocol are showcased (A P2P and Client-Server-Client version).
-				While UDP is not good for
-				this kind of applications since it is a connectionless protocol,
-				so there is no guarantee that message is going to be received nor its order nor error correction;
-				I consider it still interesting to know its features and drawbacks. </p>
-				<a href="https://github.com/jcorea510/mini_projects_lang/tree/main/udpChat" target="_blank">View Code</a>
+				<img src="projects/lunar-lander.png" alt="Preview lunar lander", class="thumbnail">
+				<h3> Lunar Lander DQN </h3>
+				<p> 
+				Implementation of Deep Q Network (DQN) machine learning algorithm for the
+				LunarLander problem from gymnasium. I did use DQN since pure
+				Q-Learning method has a very large space state table making it 
+				almost imposible to solve the problem and turning it it pure random 
+				selection of action. DQN solve it by adding a Neural Network to
+				select optimal action according to observation states and action states.
+				</p>
+				<a href="https://github.com/jcorea510/mini_projects_lang/tree/main/lunar-lander"
+					target="_blank"> View Code</a>
 			</div>
 
 			<div class="project-card">
@@ -252,24 +282,24 @@
 					target="_blank">View Code</a>
 			</div>
 
-			<div class="project-card">
-				<img src="projects/dotfiles.jpg" alt="Preview dotfiles", class="thumbnail">
-				<h3> My dotfiles </h3>
-				<p> I am a Linux enthusiast, so I would like to share my dotfiles. 
-				I haven't updated them in a while so may be a lot of problems. 
-				It includes Neovim, Yazi, zsh, Kitty, tmux, Hyprland, Waybar among others. </p>
-				<a href="https://github.com/jcorea510/dotfiles.git" target="_blank">View Code</a>
-			</div>
-
-			<div class="project-card">
-				<img src="projects/web_portafolio.png" alt="Preview portafolio", class="thumbnail">
-				<h3> Web portfolio </h3>
-				<p> This website. It uses GitHub pages for hosting since I don't have
-				a domain nor hosting service. 
-				Github pages has the disadvantage that it only may host static websites.
-				</p>
-				<a href="https://github.com/jcorea510/jcorea510.github.io.git" target="_blank">View Code</a>
-			</div>
+			<!-- <div class="project-card"> -->
+			<!-- 	<img src="projects/dotfiles.jpg" alt="Preview dotfiles", class="thumbnail"> -->
+			<!-- 	<h3> My dotfiles </h3> -->
+			<!-- 	<p> I am a Linux enthusiast, so I would like to share my dotfiles.  -->
+			<!-- 	I haven't updated them in a while so may be a lot of problems.  -->
+			<!-- 	It includes Neovim, Yazi, zsh, Kitty, tmux, Hyprland, Waybar among others. </p> -->
+			<!-- 	<a href="https://github.com/jcorea510/dotfiles.git" target="_blank">View Code</a> -->
+			<!-- </div> -->
+			<!---->
+			<!-- <div class="project-card"> -->
+			<!-- 	<img src="projects/web_portafolio.png" alt="Preview portafolio", class="thumbnail"> -->
+			<!-- 	<h3> Web portfolio </h3> -->
+			<!-- 	<p> This website. It uses GitHub pages for hosting since I don't have -->
+			<!-- 	a domain nor hosting service.  -->
+			<!-- 	Github pages has the disadvantage that it only may host static websites. -->
+			<!-- 	</p> -->
+			<!-- 	<a href="https://github.com/jcorea510/jcorea510.github.io.git" target="_blank">View Code</a> -->
+			<!-- </div> -->
 
 		</section>
   	</body>

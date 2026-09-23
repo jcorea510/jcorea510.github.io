@@ -1,0 +1,279 @@
+---
+layout: projects
+---
+
+<div class="project-card">
+<img src="assets/projects/alpr-ejemplo.png" alt="Preview alpr" class="thumbnail">
+<h3> Two stages system for detection and recognition of vehicular license plates using
+    end-to-end models and synthetic data.
+</h3>
+<p> Intituto Tecnológico de Costa Rica required an ALPR due to difficulty of finding 
+parking slots, but it had to be cheap to use proprietary hardware. 
+The solution was to train and deploy a custom ALPR. 
+It was designed in two stages to train with few data in comparative 
+of a pure end-to-end model and to compensate
+lack of data a method  of synthetic data generation was proposed. </p>
+
+<a href="https://github.com/jcorea510/TFG-ANPR.git" target="_blank">View Code</a>
+
+<!-- <div class="tag-container"> -->
+<!--   <span class="tag-bubble">Python</span> -->
+<!-- </div> -->
+</div>
+
+<div class="project-card">
+<img src="assets/projects/motor_controller_pwm.jpg" alt="Preview motor pwm" class="thumbnail">
+<h3> PWM motor speed controller </h3>
+<p> This project consist in a 12 VDC PWM controlled motor 
+that works in automatic or manual mode. 
+In manual mode speed is controlled just by a potentiometer
+so that it can't compensate speed when a load is added to 
+motor, in automatic mode a negative retro-alimentation is
+added so that with a proportional controller in closed loop
+motor speed is compensated when a load is added. 
+It also has speed indicator with LEDs, an emergency stop
+button and the PWM signal was generated without integrated circuits. </p>
+<!-- <a href="assets/projects/ControlVelocidadMotorManualAutomaticoPWM.pdf" target="_blank">Read Inform</a> -->
+<a href="https://drive.google.com/file/d/1CSZ0Sj8j0Bby45WKgHUANJX7UcdBVxIn/view?usp=sharing",
+    target="_blank">Read Inform</a>
+</div>
+
+<div class="project-card">
+<img src="assets/projects/risc-v.png" alt="Preview risc-v" class="thumbnail">
+<h3> RISC-V microarchitecure in verilog </h3>
+<p> 
+    This is an implementation of RISC-V architecture using Verilog in
+    Xilinx's Vivado software. The microarchitecture is multi-cycle pipeline,
+    and it includes hazard detection. It was left in simulation stage, and it
+    has non synthesizable modules. 
+</p>
+<a href="https://github.com/jcorea510/Procesador-RISC-V.git" target="_blank">View Code</a>
+</div>
+
+
+<div class="project-card">
+<img src="assets/projects/database.png" alt="Preview sql sensors" class="thumbnail">
+<h3> SQL Sensors </h3>
+<p>
+    An Raspberry Pi Pico W node sensor data acquisition with SQL integration over TCP.
+    It uses a very simple protocol. Sensor look if it has an ID stored in its
+    file system, if there is not, then it asks for and ID to a TCP server 
+    sending its name, so that TCP server return and unique identifier (ID) to 
+    the TCP client as reply. On successive runs the client no longer ask 
+    for the ID it just sends data measured from its sensors. 
+    Data is then stored for the server in a database along with node ID
+    and timestamp of register. 
+    Everything was coded in Python/Micropython and data is stored
+    in a database in MySQL.
+</p>
+<a href="https://github.com/jcorea510/mini_projects_lang/tree/main/sql_sensors"
+    target="_blank"> View Code</a>
+</div>
+
+<div class="project-card">
+<img src="assets/projects/christmass_decoration.jpg" alt="Preview christmass decoration" class="thumbnail">
+<h3> Christmas's decoration </h3>
+<p> 
+    This decoration has audio amplifier at discrete level 
+    in two stages: Voltage amplifier and power amplifier, and 
+    an infrared remote controller to turn on/off lights system,
+    and a light system with astable oscillator, among
+    others components. Everything was assembly into
+    modular PCBs after designs passed simulations 
+    performed in Multisim and test were conducted
+    on breadboards. PCBs were designed in Eagle software.
+</p>
+<!-- <a href="assets/projects/ArbolNavideño.pdf" target="_blank">Read Inform</a> -->
+<a href="https://drive.google.com/file/d/19dzVlqu_sgn_tLD2GGqRFNrIIaRrw-Mu/view?usp=sharing",
+    target="_blank">Read Inform</a>
+</div>
+
+<div class="project-card">
+<img src="assets/projects/tv_signal_transmision.png" alt="Preview TV signal transmision" class="thumbnail">
+<h3> TV signal transmission </h3>
+<p> 
+    A way of that a TV signal could be formed is by a stereo audio and a video,
+    so that to send this signals with an antenna a common approach is to
+    multiplex them in frequency using AM modulation
+    to order its components in frequency spectrum, then they are mixed it 
+    a adder and finally FM modulation
+    is performed for long transmission. In the receptor these signals
+    are first FM demulated, then frequency demultiplexed using filters
+    and AM demodulation. 
+    This is what was done in this project. 
+    In the first stage the architecture was planed and simulated with Simulink,
+    then in AWR circuit schematic are proposed and simulated. Finally, 
+    PCBs were designed using KiCad. But the circuits were never physically assembled,
+    everything was just simulation.
+</p>
+<!-- <a href="assets/projects/TransmisorInalambricoTelevisionAnalogica.pdf" target="_blank">Read Inform</a> -->
+<a href="https://drive.google.com/file/d/1S0ZMMGCfI94KDket-Qj2CSwJaik1Ujik/view?usp=sharing",
+   target="_blank">Read Inform</a>
+</div>
+
+<div class="project-card">
+<img src="assets/projects/serial_protocols.png" alt="Preview serial protocols spi" class="thumbnail">
+<h3> Serial protocols design </h3>
+<p> 
+    Design and simulation of hardware using System Verilog of common 
+    serial communication protocols: UART and SPI; I also tried I2C, but
+    I wasn't able to finishes it yet. 
+    I tried to make it sinthesizable avoiding the use of non 
+    sinthesizable keywords, but I cannot be completely sure since
+    I do not own a FPGA. At the current state transmission and reception 
+    test were successfully achieved.
+</p>
+<a href="https://github.com/jcorea510/mini_projects_lang/tree/main/serial_protocols"
+    target="_blank"> View Code</a>
+</div>
+
+<div class="project-card">
+<img src="assets/projects/oscilloscope.png" alt="Preview oscilloscope" class="thumbnail">
+<h3> Oscilloscope with STM32 </h3>
+<p> 
+I did not have an oscilloscope and I needed one to test some small projects
+I was doing, so I came with the idea to develop my own oscilloscope using
+STM32F103C8T6's ADC and and GUI written in Rust to visualize data comming 
+from embedded device throught UART.
+To maximize speed I used ADC DMA and freertos, then I send raw data to PC.
+In the PC I do any other process like adding cursors, stop reading, export data, etc.
+</p>
+<a href="https://github.com/jcorea510/mini_projects_lang/tree/main/osciolloscope"
+    target="_blank"> View Code</a>
+</div>
+
+<div class="project-card">
+<img src="assets/projects/stm32multidevice.jpeg" alt="Preview stm32multidevice" class="thumbnail">
+<h3> STM32 multidevice using Rust's async feature instead of RTOS </h3>
+<p> This was a very simple example of how to program embedded software
+in rust embassy. Rust is not just easier than C/C++ to develop
+high performance and memory safer embedded software, but 
+async feature allow executing parallel task without RTOS,
+while at same time results in relative faster programs and 
+smaller programs, if the project does not require very large code,
+in contrary case then RTOS is better for smaller and faster programs. </p>
+<a href="https://github.com/jcorea510/mini_projects_lang/tree/main/stm32multidevice"
+    target="_blank"> View Code</a>
+</div>
+
+<div class="project-card">
+<img src="assets/projects/signal_filters.jpg" alt="Preview signal filter" class="thumbnail">
+<h3> Signal combination and filtering </h3>
+<p> 
+    This consists in a mixer of signals from a
+    triangular oscillator, senoidal oscillator and microphone.
+    All signals are added then through a set of active filters
+    all signal were recovered. 
+    This was let a prototype step just tested on breadboard
+    and simulated in Multisim.
+</p>
+<!-- <a href="assets/projects/SeparadorDeSeñalesMezcladas_FiltrosActivos.pdf" target="_blank">Read Inform</a> -->
+<a href="https://drive.google.com/file/d/1g4-LISXuW5C5uuOPyp6qLV1t-JTZ8_GN/view?usp=sharing",
+    target="_blank">Read Inform</a>
+</div>
+
+<div class="project-card">
+<img src="assets/projects/rustygame.png" alt="Preview rustygame" class="thumbnail">
+<h3> Rusty game </h3>
+<p> My very first game and my very first use of Rust. 
+This is a game when you run from a group of chasers slimes. 
+A lot of features were never implement like damage from attacks
+or criteria of losing/winning. My objective was mainly 
+to learn basic core of rust. </p>
+<a href="https://github.com/jcorea510/mini_projects_lang/tree/main/rustygame" target="_blank">View Code</a>
+</div>
+
+<div class="project-card">
+<img src="assets/projects/SSB_simulator.JPG" alt="Preview ssb simulator" class="thumbnail">
+<h3> SSB Simulator </h3>
+<p> This is an app developed in Python to simulate amplitude modulated transitions
+of type Single Side Band (SSB) using Hilberth transform.
+The app receive an audio file .waw format, and it shows results 
+of input signal, double side band signal (DSB) and 
+either SSB upper side or lower side in modulator and
+also the demodulated signal in demodulator.
+It also has adjustable parameter to show effect of 
+frequency and phase error in demodulator as well as the effect 
+of DC offset for full carrier modulation.
+</p>
+<a href="https://github.com/jcorea510/Modulador-SSB" target="_blank">View Code</a>
+</div>
+
+<div class="project-card">
+<img src="assets/projects/mnist.png" alt="Preview mnist" class="thumbnail">
+<h3> MNIST classification </h3>
+<p> A comparative study of classification algorithms using
+MNIST dataset. Implementations for SVM, CNN, Softmax, KNN
+and RDF was developed in Python. Then a long study 
+of features, data augmentation effect, hyperparameter effect,
+etc. was executed to know the best algorithm: 
+The best classification was CNN. </p>
+<a href="https://github.com/jcorea510/MNIST-classificador.git" target="_blank">View Code</a>
+</div>
+
+<!-- <div class="project-card"> -->
+<!-- 	<img src="assets/projects/ocean_depth_stimation.jpg" alt="Preview ocean depth" class="thumbnail"> -->
+<!-- 	<h3> Costa Rica's seafloor depth estimation </h3> -->
+<!-- 	<p> Here a portion of Costa Rica seafloor depth was estimated using  -->
+<!-- 	different approaches of regression models:  -->
+<!-- 	Weighted linear regression, linear regression, and polynomial  -->
+<!-- 	regression algorithms coded in Octave/Matlab. </p> -->
+<!-- 	<a href="https://github.com/jcorea510/Modelo-Costa-Costa-Rica" target="_blank">View Code</a> -->
+<!-- </div> -->
+
+<!-- <div class="project-card"> -->
+<!-- 	<img src="assets/projects/udpchat.png" alt="Preview udpChat" class="thumbnail"> -->
+<!-- 	<h3> UDP Chat App </h3> -->
+<!-- 	<p> In this C++ project two versions of chat app example using UDP  -->
+<!-- 	communication protocol are showcased (A P2P and Client-Server-Client version). -->
+<!-- 	While UDP is not good for -->
+<!-- 	this kind of applications since it is a connectionless protocol, -->
+<!-- 	so there is no guarantee that message is going to be received nor its order nor error correction; -->
+<!-- 	I consider it still interesting to know its features and drawbacks. </p> -->
+<!-- 	<a href="https://github.com/jcorea510/mini_projects_lang/tree/main/udpChat" target="_blank">View Code</a> -->
+<!-- </div> -->
+<div class="project-card">
+<img src="assets/projects/lunar-lander.png" alt="Preview lunar lander" class="thumbnail">
+<h3> Lunar Lander DQN </h3>
+<p> 
+Implementation of Deep Q Network (DQN) machine learning algorithm for the
+LunarLander problem from gymnasium. I did use DQN since pure
+Q-Learning method has a very large space state table making it 
+almost imposible to solve the problem and turning it it pure random 
+selection of action. DQN solve it by adding a Neural Network to
+select optimal action according to observation states and action states.
+</p>
+<a href="https://github.com/jcorea510/mini_projects_lang/tree/main/lunar-lander"
+    target="_blank"> View Code</a>
+</div>
+
+<div class="project-card">
+<img src="assets/projects/gesture_controller.jpg" alt="Preview gestures" class="thumbnail">
+<h3> Gesture controller </h3>
+<p> A gesture classification in C++ with YOLOv11. 
+It does perform hand detection and gesture classification in camera or image and 
+then it can send through UART protocol a gesture classification ID to a
+STM32 blue pill which encode it and shows it in LEDs. 
+WARNING: I used very small dataset, so it is very indeed overfitted. </p>
+<a href="https://github.com/jcorea510/mini_projects_lang/tree/main/gesture_controller",
+    target="_blank">View Code</a>
+</div>
+
+<!-- <div class="project-card"> -->
+<!-- 	<img src="assets/projects/dotfiles.jpg" alt="Preview dotfiles" class="thumbnail"> -->
+<!-- 	<h3> My dotfiles </h3> -->
+<!-- 	<p> I am a Linux enthusiast, so I would like to share my dotfiles.  -->
+<!-- 	I haven't updated them in a while so may be a lot of problems.  -->
+<!-- 	It includes Neovim, Yazi, zsh, Kitty, tmux, Hyprland, Waybar among others. </p> -->
+<!-- 	<a href="https://github.com/jcorea510/dotfiles.git" target="_blank">View Code</a> -->
+<!-- </div> -->
+<!---->
+<!-- <div class="project-card"> -->
+<!-- 	<img src="assets/projects/web_portafolio.png" alt="Preview portafolio" class="thumbnail"> -->
+<!-- 	<h3> Web portfolio </h3> -->
+<!-- 	<p> This website. It uses GitHub pages for hosting since I don't have -->
+<!-- 	a domain nor hosting service.  -->
+<!-- 	Github pages has the disadvantage that it only may host static websites. -->
+<!-- 	</p> -->
+<!-- 	<a href="https://github.com/jcorea510/jcorea510.github.io.git" target="_blank">View Code</a> -->
+<!-- </div> -->

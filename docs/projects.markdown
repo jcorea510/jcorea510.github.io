@@ -34,7 +34,7 @@ motor speed is compensated when a load is added.
 It also has speed indicator with LEDs, an emergency stop
 button and the PWM signal was generated without integrated circuits. </p>
 <!-- <a href="assets/projects/ControlVelocidadMotorManualAutomaticoPWM.pdf" target="_blank">Read Inform</a> -->
-<a href="https://drive.google.com/file/d/1CSZ0Sj8j0Bby45WKgHUANJX7UcdBVxIn/view?usp=sharing",
+<a href="https://drive.google.com/file/d/1CSZ0Sj8j0Bby45WKgHUANJX7UcdBVxIn/view?usp=sharing"
     target="_blank">Read Inform</a>
 </div>
 
@@ -84,7 +84,7 @@ button and the PWM signal was generated without integrated circuits. </p>
     on breadboards. PCBs were designed in Eagle software.
 </p>
 <!-- <a href="assets/projects/ArbolNavideño.pdf" target="_blank">Read Inform</a> -->
-<a href="https://drive.google.com/file/d/19dzVlqu_sgn_tLD2GGqRFNrIIaRrw-Mu/view?usp=sharing",
+<a href="https://drive.google.com/file/d/19dzVlqu_sgn_tLD2GGqRFNrIIaRrw-Mu/view?usp=sharing"
     target="_blank">Read Inform</a>
 </div>
 
@@ -107,7 +107,7 @@ button and the PWM signal was generated without integrated circuits. </p>
     everything was just simulation.
 </p>
 <!-- <a href="assets/projects/TransmisorInalambricoTelevisionAnalogica.pdf" target="_blank">Read Inform</a> -->
-<a href="https://drive.google.com/file/d/1S0ZMMGCfI94KDket-Qj2CSwJaik1Ujik/view?usp=sharing",
+<a href="https://drive.google.com/file/d/1S0ZMMGCfI94KDket-Qj2CSwJaik1Ujik/view?usp=sharing"
    target="_blank">Read Inform</a>
 </div>
 
@@ -168,7 +168,7 @@ in contrary case then RTOS is better for smaller and faster programs. </p>
     and simulated in Multisim.
 </p>
 <!-- <a href="assets/projects/SeparadorDeSeñalesMezcladas_FiltrosActivos.pdf" target="_blank">Read Inform</a> -->
-<a href="https://drive.google.com/file/d/1g4-LISXuW5C5uuOPyp6qLV1t-JTZ8_GN/view?usp=sharing",
+<a href="https://drive.google.com/file/d/1g4-LISXuW5C5uuOPyp6qLV1t-JTZ8_GN/view?usp=sharing"
     target="_blank">Read Inform</a>
 </div>
 
@@ -243,21 +243,40 @@ almost imposible to solve the problem and turning it it pure random
 selection of action. DQN solve it by adding a Neural Network to
 select optimal action according to observation states and action states.
 </p>
-<a href="https://github.com/jcorea510/mini_projects_lang/tree/main/lunar-lander"
-    target="_blank"> View Code</a>
+<a href="/posts/tutorial/rl_notes_dqn/rl-notes-dqn" target="_blank"> Read Inform </a>
+<!-- <a href="https://github.com/jcorea510/mini_projects_lang/tree/main/lunar-lander" -->
+<!--     target="_blank"> View Code</a> -->
 </div>
 
 <div class="project-card">
-<img src="assets/projects/gesture_controller.jpg" alt="Preview gestures" class="thumbnail">
-<h3> Gesture controller </h3>
-<p> A gesture classification in C++ with YOLOv11. 
-It does perform hand detection and gesture classification in camera or image and 
-then it can send through UART protocol a gesture classification ID to a
-STM32 blue pill which encode it and shows it in LEDs. 
-WARNING: I used very small dataset, so it is very indeed overfitted. </p>
-<a href="https://github.com/jcorea510/mini_projects_lang/tree/main/gesture_controller",
-    target="_blank">View Code</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m_k-j7ra_sw?si=uclZR688ziLV6Lqc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="thumbnail"></iframe>
+<!-- <img src="assets/projects/datascience.png" alt="preview dashboard" class="thumbnail"> -->
+<h3>Ciencia De Datos: SuperStore</h3>
+<p>
+As part of Introduction Course to Data Science I was in charge to 
+do a research of finantial state of SuperStore Giant and diagnostic 
+some issues that could be affecting the profit due to sells of products 
+with low profit and high amount of product devolution (return), as well 
+as give advices about what to do with the result I got. 
+The study was conducted using Python for research and Power Bi for report of 
+data.
+</p>
+<a href="https://drive.google.com/file/d/18Ku1p9WDOVXVBLtNyWBsIfPjem8K9_a3/view?usp=drive_link" target="_blank">
+Read Inform
+</a>
 </div>
+
+<!-- <div class="project-card"> -->
+<!-- <img src="assets/projects/gesture_controller.jpg" alt="Preview gestures" class="thumbnail"> -->
+<!-- <h3> Gesture controller </h3> -->
+<!-- <p> A gesture classification in C++ with YOLOv11.  -->
+<!-- It does perform hand detection and gesture classification in camera or image and  -->
+<!-- then it can send through UART protocol a gesture classification ID to a -->
+<!-- STM32 blue pill which encode it and shows it in LEDs.  -->
+<!-- WARNING: I used very small dataset, so it is very indeed overfitted. </p> -->
+<!-- <a href="https://github.com/jcorea510/mini_projects_lang/tree/main/gesture_controller" -->
+<!--     target="_blank">View Code</a> -->
+<!-- </div> -->
 
 <!-- <div class="project-card"> -->
 <!-- 	<img src="assets/projects/dotfiles.jpg" alt="Preview dotfiles" class="thumbnail"> -->

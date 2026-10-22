@@ -19,20 +19,7 @@
   	</head>
 
 	<body class="bg">
-		<div style="align-items: left; background-color:#1e1e2e; padding: 10px 20px">
-			<a href="../../../index.html">
-		  		<button type="button", class="line-button"> Home </button>
-			</a>
-
-			<a href="../../../projects.html">
-			  <button type="button", class="line-button"> Projects </button>
-			</a>
-
-			<a href="../../../blog.html">
-			  <button type="button", class="line-button"> Blog </button>
-			</a>
-		</div>
-
+		{% include navlinks.html %}
 		<article class="thought-article">
 			{{ content }}
 		</article>

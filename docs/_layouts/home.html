@@ -8,63 +8,47 @@
 	</head>
 
 	<body class="bg">
-		<div style="align-items: left; background-color:#1e1e2e; padding: 10px 20px">
-			<a href="index.html">
-				<button type="button", class="line-button"> Home </button>
-			</a>
 
-			<a href="projects.html">
-			  <button type="button", class="line-button"> Projects </button>
-			</a>
-
-			<a href="blog.html">
-			  <button type="button", class="line-button"> Blog </button>
-			</a>
-		</div>
+		{% include navlinks.html %}
 
 		<div class="hero">
-			<img src="assets/portafolio/Fotografia.jpg" alt="micarawww", class="mefoto">
+			<img src="assets/portafolio/Fotografia.jpg" alt="micarawww" class="mefoto">
 
-			<div style="align-items: center; gap: 20px", class="aboutme">
-				<h1> I am Justin,
-					An Electronic Engineer.
-				</h1>
-				<p> 
-				Electronic Engineer from Instituto Tecnológico de Costa Rica with interests 
-				in embedded systems and machine learning. 
-				I enjoy building complete engineering projects that combine hardware and software,
-				from firmware and digital circuits to computer vision applications.
-				</br>
-				Currently, seeking opportunities in embedded software/hardware or ML/AI development.
-				</p>
-
+			<div class="aboutme">
+				{{ page.content }}
 				<div style="display: flex; align-items: center">
-					<a href="https://www.github.com/jcorea510" target="_blank">
-						<button type="button", class="more-button"> Github </button>
+					<a href="https://www.github.com/jcorea510" target="_blank" class="more-button"> 
+						Github
 					</a>
 
-					<a href="https://linkedin.com/in/justincorea" target="_blank">
-					  <button type="button", class="more-button"> LinkdLn </button>
+					<a href="https://linkedin.com/in/justincorea" target="_blank" class="more-button">
+						LinkdLn
 					</a>
 
-					<a href="assets/portafolio/jcorea_cv_general.pdf", target="_blank">
-					  <button type="button", class="more-button"> Resume </button>
+					<a href="assets/portafolio/jcorea_cv_general.pdf", target="_blank" class="more-button">
+						Resume
+					</a>
+					<a href="https://akainishin027.neocities.org/", target="_blank" class="more-button">
+						Personal Website
 					</a>
 				</div>
 
 			</div>
 		</div>
-
-		<div  class="aboutme"> 
+		
+		<div class="aboutme"> 
 				<h2> Certifications	</h2>
 				<ul>
-					<li> <a href="assets/portafolio/certificado-graduacion.jpg" target="_blank"> Graduation Diploma of Licenciate Degree </a></li> 
-					<li> <a href="assets/portafolio/certificado-japones.jpg" target="_blank">  Official Certification of Japanese Level: JLPT N5	</a></li>
-					<li> <a href="https://assessment.speaknow.co/#/report?company=PROCOMER&project=Talent%20Costa%20Rica%20Job%20Fair%20GAM&assessmentId=1764828399579402&token=e3cb2618-44f1-4b91-924b-873335cb7060" target="_blank"> English Test from SpeakNow</a></li>
-					<li> <a href="https://www.credly.com/badges/4cd3b4ad-9358-4d12-a948-7fb3ba59edf0/public_url" target="_blank"> Introduction to Data Science: Course form Cisco</a></li>
-
-					<li> <a href="https://www.credly.com/badges/e6432d31-9289-436b-8e4a-2ba12c95bcbb/public_url" target="_blank"> Data Science Essentials with Python: Course form Cisco </a></li>
-
+					<li> <a href="assets/portafolio/certificado-graduacion.jpg" target="_blank">
+							Graduation Diploma of Licenciate Degree </a></li> 
+					<li> <a href="assets/portafolio/certificado-japones.jpg" target="_blank">
+							Official Certification of Japanese Level: JLPT N5	</a></li>
+					<li> <a href="https://assessment.speaknow.co/#/report?company=PROCOMER&project=Talent%20Costa%20Rica%20Job%20Fair%20GAM&assessmentId=1764828399579402&token=e3cb2618-44f1-4b91-924b-873335cb7060" target="_blank">
+							English Test from SpeakNow</a></li>
+					<li> <a href="https://www.credly.com/badges/4cd3b4ad-9358-4d12-a948-7fb3ba59edf0/public_url" target="_blank">
+							Introduction to Data Science: Course form Cisco</a></li>
+					<li> <a href="https://www.credly.com/badges/e6432d31-9289-436b-8e4a-2ba12c95bcbb/public_url" target="_blank">
+							Data Science Essentials with Python: Course form Cisco </a></li>
 					<li> Driving License Costa Rica B1 </li>
 				</ul>
 		</div>
@@ -77,11 +61,11 @@
 						using end-to-end models and synthetic data </p>
 
 						<div style="display: flex; align-items: center">
-							<a href="assets/portafolio/tesis-alpr.pdf", target="_blank">
-								<button type="button", class="more-button"> PDF </button>
+							<a href="assets/portafolio/tesis-alpr.pdf" target="_blank" class="more-button">
+								PDF
 							</a>
-							<a href="assets/portafolio/tesis-presentation.pdf", target="_blank">
-								<button type="button", class="more-button"> Presentation </button>
+							<a href="assets/portafolio/tesis-presentation.pdf" target="_blank" class="more-button">
+								Presentation
 							</a>
 						</div>
 					</li> 

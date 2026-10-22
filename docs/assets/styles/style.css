@@ -123,7 +123,7 @@ h2 {
 	height: auto;
 	width: 90%;
 	margin: auto;
-	margin-top: -20px;
+	margin-top: -60px;
 }
 
 .mefoto {
@@ -216,10 +216,11 @@ a:hover {
 	.hero {
 		flex-direction: column;
 		text-align: center;
+		height: auto;
 	}
 
 	.mefoto {
-		width: 180px;
+		height: 180px;
 	}
 }
 
